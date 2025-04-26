@@ -10,7 +10,7 @@ class TPQueue {
 
  public:
     void push(const T& element) {
-       auto it = items.front();
+       auto it = items.begin();
        while (it != items.end() && it->prior >= element.prior) {
           ++it;
        }
