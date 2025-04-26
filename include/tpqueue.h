@@ -3,11 +3,11 @@
 #define INCLUDE_TPQUEUE_H_
 #include <list>
 
-
 template<typename T>
 class TPQueue {
  private:
-    std::list<T> lists;
+    std::list<T> items;
+
  public:
     void push(const T& element) {
        auto it = items.front();
