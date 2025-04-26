@@ -6,29 +6,30 @@
 template<typename T>
 class TPQueue {
 private:
-	std::list<T> items;
+   std::list<T> items;
 public:
-	void push(const T& element) {
-    auto it = items.begin();
-		while (it != items.end() && it->prior >= element.prior) {
-			++it;
-		}
-		items.insert(it, element);
-	}
-	T pop() {
-		T frontElement = items.front();
-		items.pop_front();
-		return frontElement;
-	}
-	bool isEmpty() const {
-		return items.empty();
-	}
-	const T& front() const {
-		return items.front();
-	}
-	size_t size() const {
-		return items.size();
-	}
+   void push(const T& element) {
+     auto it = items.begin();
+     while (it != items.end() && it->prior >= element.prior) {
+       ++it;
+     }
+     items.insert(it, element);
+   }
+   T pop() {
+     T frontElement = item.front();
+     items.pop_front();
+     return frontElement;
+   }
+
+   bool isEmpty() const {
+     return items.empty();
+   }
+   const T& front() const {
+     return items.front();
+   }
+   size_t size() const {
+     return items.size();
+   }
 };
 
 struct SYM {
